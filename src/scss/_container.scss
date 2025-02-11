@@ -1,0 +1,47 @@
+.container {
+  background-color: $container-bg;
+  border-radius: 16px;
+  width: 100%;
+  padding: 28px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
+
+  &__heading {
+    font-size: 14px;
+    font-weight: 500;
+    color: $container-heading;
+    padding-bottom: 8px;
+  }
+  &__subheading {
+    font-size: 12px;
+    font-weight: 700;
+    color: $container-subheading;
+  }
+
+  &__heading--light {
+    color: white;
+    font-size: 12px;
+  }
+  &__subheading--light {
+    color: white;
+    font-size: 14px;
+  }
+  &__heading--event {
+    color: $container-event-heading;
+  }
+
+  &--concentration {
+    background-color: $container-concentration-bg;
+  }
+  &--stress {
+    background-color: $container-stress-bg;
+  }
+  &--activity {
+    background-color: $container-activity-bg;
+  }
+  &--event {
+    background-color: $container-event-bg;
+  }
+  &--event--highlight {
+    background-color: $container-event-highlight-bg;
+  }
+}

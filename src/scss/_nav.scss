@@ -1,0 +1,11 @@
+.nav {
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    color: $nav-color;
+    gap: 48px;
+    margin-top: 15vh;
+    justify-content: end;
+  }
+}
