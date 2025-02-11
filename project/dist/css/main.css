@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__menu {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  color: white;
+  gap: 48px;
+  margin-top: 15vh;
+  justify-content: end;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  align-items: stretch;
+  padding: 80px;
+  padding-left: 162px;
+  gap: 64px;
+  background-color: #E8F1F9;
+  border-radius: 51px;
+  min-height: fit-content;
+}
+.middle__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 160px 280px 200px;
+  row-gap: 64px;
+  column-gap: 32px;
+  grid-template-areas: "a a b b c c" "d d d e e e" "f f f g g g";
+}
+.middle__grid > :nth-child(1) {
+  grid-area: a;
+}
+.middle__grid > :nth-child(2) {
+  grid-area: b;
+}
+.middle__grid > :nth-child(3) {
+  grid-area: c;
+}
+.middle__grid > :nth-child(4) {
+  grid-area: d;
+}
+.middle__grid > :nth-child(5) {
+  grid-area: e;
+}
+.middle__grid > :nth-child(6) {
+  grid-area: f;
+}
+.middle__grid > :nth-child(7) {
+  grid-area: g;
+}
+
+.container {
+  background-color: white;
+  border-radius: 16px;
+  width: 100%;
+  padding: 28px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.05);
+}
+.container__heading {
+  font-size: 14px;
+  font-weight: 500;
+  color: #85A5C2;
+  padding-bottom: 8px;
+}
+.container__subheading {
+  font-size: 12px;
+  font-weight: 700;
+  color: #59748A;
+}
+.container__heading--light {
+  color: white;
+  font-size: 12px;
+}
+.container__subheading--light {
+  color: white;
+  font-size: 14px;
+}
+.container__heading--event {
+  color: #0E426F;
+}
+.container--concentration {
+  background-color: #5FA1DA;
+}
+.container--stress {
+  background-color: #C5B5F5;
+}
+.container--activity {
+  background-color: #EEADC4;
+}
+.container--event {
+  background-color: #F4FAFF;
+}
+.container--event--highlight {
+  background-color: #4263EB;
+}
+
+.right-sidebar {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 56px;
+  row-gap: 28px;
+  max-width: 450px;
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.user__heading {
+  font-size: 14px;
+}
+.user__subheading {
+  font-size: 12px;
+  font-weight: 500;
+  color: #5fa1da;
+}
+
+.left-sidebar {
+  position: fixed;
+  width: 112px;
+  height: 100%;
+  background: #7030A0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0px 24px 24px 0;
+  gap: 32px;
+  padding: 20px;
+}
+.left-sidebar__top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.left-sidebar__arrow {
+  background: transparent;
+  border: none;
+}
+
+.searchbar {
+  align-self: start;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  border-bottom: 1px solid #d4e3f0;
+  padding: 10px;
+}
+.searchbar__placeholder {
+  color: #85a5c2;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.calendar__month {
+  color: #0E426F;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+.calendar__days {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  column-gap: 16px;
+}
+.calendar__day {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+.calendar__weekday {
+  color: #1666AC;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.calendar__numberday {
+  color: #6A7178;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.health {
+  height: 76px;
+  display: flex;
+  flex-direction: row;
+  padding: 12px 0px;
+  border-radius: 19px;
+  background-color: #E8F1F9;
+}
+.health__item {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 18px;
+  border-right: 1px solid #A3C9EA;
+}
+.health__item:last-child {
+  border-right: none;
+}
+.health__heading {
+  color: #A3C9EA;
+}
+.health__subheading {
+  color: #5FA1DA;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Raleway", serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100vh;
+  font-size: 14px;
+}

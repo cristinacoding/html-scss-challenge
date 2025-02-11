@@ -1,0 +1,11 @@
+.searchbar {
+  align-self: start;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  border-bottom: 1px solid #d4e3f0;
+  padding: 10px;
+  &__placeholder {
+    color: #85a5c2;
+  }
+}
