@@ -4,7 +4,8 @@
   flex-direction: row;
   padding: 12px 0px;
   border-radius: 19px;
-  background-color: $health-bg;
+  background-color: var(--health-bg);
+  
   &__item {
     flex-grow: 1;
     display: flex;
@@ -12,18 +13,19 @@
     row-gap: 8px;
     justify-content: center;
     align-items: center;
-    padding: 10px 18px;
-    border-right: 1px solid $health-heading;
+    border-right: 1px solid var(--health-heading);
     &:last-child {
       border-right: none;
     }
   }
+
   &__heading {
-    color: $health-heading;
-}
-&__subheading {
-    color: $health-subheading;
+    color: var(--health-heading);
+  }
+
+  &__subheading {
+    color: var(--health-subheading);
     font-size: 18px;
     font-weight: 700;
-}
+  }
 }

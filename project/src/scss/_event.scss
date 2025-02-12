@@ -1,0 +1,95 @@
+.event {
+  border-radius: 16px;
+  padding: 24px;
+  background-color: var(--event-bg);
+  color: var(--event-text);
+  font-weight: 500;
+  line-height: 24px;
+  position: relative;
+  overflow: hidden;
+  min-height: fit-content;
+
+  &__title {
+    font-size: 14px;
+    color: var(--event-title);
+    margin-bottom: 12px;
+  }
+
+  &__person {
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--event-border-bottom);
+      padding-bottom: 12px;
+    }
+  }
+  
+  &__link {
+    display: inline-block;
+    color: var(--event-link);
+    margin-top: 24px;
+  }
+
+  &__attendees {
+    margin-top: 16px;
+    display: flex;
+    &-attendee {
+      height: 34px;
+      width: 34px;
+      border-radius: 50%;
+      background-color: var(--event-attende-bg);
+      border: 1px solid white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 8px;
+      overflow: hidden;
+      &:not(:first-of-type) {
+        margin-left: -8px;
+      }
+      &:last-child {
+        background-color: var(--event-attendee-extra-bg);
+        padding-top: 0;
+      }
+      & img {
+        width: 110%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &--highlight {
+    background-color: var(--event-highlight-bg);
+    background-image: url(../../dist/img/medal.png);
+    background-repeat: no-repeat;
+    background-position: right 16px top;
+    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.1);
+    color: white;
+    & .event__title {
+      color: white;
+    }
+  }
+
+  &--health {
+    background-image: url(../../dist/img/caduceus.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+
+  &--meditation {
+    background-image: url(../../dist/img/lotus.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+
+  &__arrow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 40px;
+    width: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-top-left-radius: 16px;
+  }
+}

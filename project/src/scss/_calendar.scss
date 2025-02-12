@@ -1,38 +1,79 @@
 .calendar {
-    display: flex;
-    flex-direction: column;
-    row-gap: 12px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  height: 96px;
+
   &__month {
-    color: $calendar-month;
+    color: var(--calendar-month);
     font-size: 14px;
     font-weight: 700;
     display: flex;
     align-items: center;
     column-gap: 8px;
   }
+
   &__days {
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    align-items: start;
-    column-gap: 16px; 
-  }
-  &__day {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-  }
-  &__weekday {
-    color: $calendar-weekday;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 24px;
-  }
-  &__numberday {
-    color: $calendar-numberday;
-    font-size: 14px;
-    font-weight: 700;
+    justify-content: space-between;
+    align-items: stretch;
+
+    &-day {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 74px;
+      padding: 8px 0px;
+      border-radius: 24px;
+      font-size: 14px;
+      font-weight: 500;
+
+      &__weekday {
+        color: var(--calendar-weekday);
+        padding-bottom: 10px;
+      }
+
+      &__numberday {
+        color: var(--calendar-numberday);
+        font-weight: 700;
+      }
+
+      &--schedule {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 40px;
+          left: 16px;
+          width: 4px;
+          height: 4px;
+          border-radius: 4px;
+          background-color: var(--calendar-highlight);
+        }
+      }
+
+      &--highlight {
+        background-color: var(--calendar-highlight);
+        padding: 8px 5px;
+
+        .calendar__days-day__weekday,
+        .calendar__days-day__numberday {
+          color: white;
+        }
+        &.calendar__days-day--schedule {
+          &::before {
+            background-color: white;
+            left: 28px;
+          }
+        }
+      }
+    }
+
+    & .calendar__days-day:last-child .calendar__days-day__weekday,
+    & .calendar__days-day:last-child .calendar__days-day__numberday {
+      color: var(--calendar-day-disabled);
+    }
   }
 }

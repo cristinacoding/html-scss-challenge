@@ -3,9 +3,16 @@
   display: flex;
   align-items: center;
   column-gap: 8px;
-  border-bottom: 1px solid #d4e3f0;
-  padding: 10px;
+  border-bottom: 1px solid var(--searchbar-border);
+  padding: 8px;
+  font-size: 14px;
+  color: var(--searchbar-text);
+  line-height: 1.4;
+  max-width: 80%;
+  
   &__placeholder {
-    color: #85a5c2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
