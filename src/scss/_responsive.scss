@@ -1,0 +1,61 @@
+@include media-lg {
+  :root {
+    --right-sidebar-width: 300px;
+  }
+  .middle {
+    padding: 40px;
+    &__grid {
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
+      column-gap: 12px;
+    }
+  }
+  .right-sidebar {
+    padding: 30px;
+  }
+}
+
+@include media-md {
+  :root {
+    --right-sidebar-width: 0px;
+  }
+  .right-sidebar {
+    transform: translateX(100%);
+  }
+  .middle {
+    padding: 80px;
+    border-radius: 0;
+  }
+}
+
+@include media-sm {
+  :root {
+    --left-sidebar-width: 70px;
+  }
+  .middle {
+    padding: 40px;
+    margin-left: 50px;
+  }
+
+  .left-sidebar {
+    padding: 16px;
+    &__top {
+      flex-direction: column;
+    }
+  }
+}
+
+@include media-xs {
+  .card--with-icons {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr 1fr 1fr;
+    row-gap: 8px;
+    column-gap: 8px;
+    grid-template-areas:
+      "a b"
+      "c c"
+      "d d"
+      "e e";
+  }
+}

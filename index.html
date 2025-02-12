@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>User Dashboard</title>
+    <meta name="description" content="A dashboard for the user.">
     <link rel="stylesheet" href="./dist/css/main.css">
+    <link rel="icon" type="image/png" href="./dist/img/logo.png">
 </head>
 
 <body>
@@ -14,16 +16,16 @@
 
     <section class="left-sidebar">
         <div class="left-sidebar__top">
-            <img class="left-sidebar__logo" src="./dist/img/logo.png" alt="logo">
-            <button class="left-sidebar__arrow"><img src="./dist/img/chevron.png" alt="chevron"></button>
+            <img class="left-sidebar__logo" src="./dist/img/logo.png" alt="Logo">
+            <button class="left-sidebar__arrow"><img src="./dist/img/menu-expand-icon.png" alt="Expand Icon"></button>
         </div>
         <nav class="nav">
             <ul class="nav__menu">
-                <li class="nav__item"><img src="./dist/img/home-icon.png" alt="Home Icon"></li>
-                <li class="nav__item"><img src="./dist/img/chart-icon.png" alt="Chart Icon"></li>
-                <li class="nav__item"><img src="./dist/img/heart-icon.png" alt="Heart Icon"></li>
-                <li class="nav__item"><img src="./dist/img/home-icon.png" alt="Home Icon"></li>
-                <li class="nav__item"><img src="./dist/img/settings-icon.png" alt="Settings Icon"></li>
+                <li class="nav__item"><a href="#" aria-label="Home" tabindex="1"><img src="./dist/img/home-icon.png" alt="Home Icon"></a></li>
+                <li class="nav__item"><a href="#" aria-label="Statistics" tabindex="2"></a><img src="./dist/img/chart-icon.png" alt="Chart Icon"></a></li>
+                <li class="nav__item"><a href="#" aria-label="Likes" tabindex="3"></a><img src="./dist/img/heart-icon.png" alt="Heart Icon"></a></li>
+                <li class="nav__item nav__item--active"><a href="#" aria-label="User Information" tabindex="4"></a><img src="./dist/img/home-icon.png" alt="Home Icon"></a></li>
+                <li class="nav__item"><a href="#" aria-label="Settings" tabindex="5"></a><img src="./dist/img/settings-icon.png" alt="Settings Icon"></a></li>
             </ul>
         </nav>
     </section>
@@ -32,41 +34,100 @@
     <main class="middle">
         <div class="searchbar">
             <img class="searchbar__icon" src="./dist/img/search-icon.png" alt="Search Icon">
-            <p class="searchbar__placeholder">Search for athlete profile data, workout and meditation sessions</p>
+            <p class="searchbar__placeholder" title="Search for athlete profile data, workout and meditation sessions">Search for athlete profile data, workout and meditation sessions</p>
         </div>
         <div class="middle__grid">
-            <div class="container container--concentration">
-                <h2 class="container__heading container__heading--light">Concentration rate</h2>
-                <h3 class="container__subheading container__subheading--light">Normal</h3>
+            <div class="color-card color-card--concentration">
+                <h2 class="color-card__heading">Concentration rate</h2>
+                <h3 class="color-card__subheading">Normal</h3>
+                <img src="./dist/img/statistics.png">
             </div>
 
-            <div class="container container--stress">
-                <h2 class="container__heading container__heading--light">Brain stress rate</h2>
-                <h3 class="container__subheading container__subheading--light">Normal</h3>
+            <div class="color-card color-card--stress">
+                <h2 class="color-card__heading">Brain stress rate</h2>
+                <h3 class="color-card__subheading">Normal</h3>
+                <img src="./dist/img/pointer-icon-purple.png">
+                <img src="./dist/img/progress-line.png">
+                <img src="./dist/img/text.png">
             </div>
 
-            <div class="container container--activity">
-                <h2 class="container__heading container__heading--light">Brain activity</h2>
+            <div class="color-card color-card--activity">
+                <h2 class="color-card__heading">Brain activity</h2>
+                <img src="./dist/img/chart.png">
             </div>
 
-            <div class="container">
-                <h2 class="container__heading">Concentration rate</h2>
-                <h3 class="container__subheading">Normal</h3>
+            <div class="card">
+                <h2 class="card__heading">Resting heart rate</h2>
+                <h3 class="card__subheading">Normal</h3>
+                <img src="./dist/img/graph-1.png">
             </div>
 
-            <div class="container">
-                <h2 class="container__heading">Resting heart rate</h2>
-                <h3 class="container__subheading">66 bmp (average)</h3>
+            <div class="card">
+                <h2 class="card__heading">Performance heart rate</h2>
+                <h3 class="card__subheading">66 bmp (average)</h3>
+                <img src="./dist/img/graph-2.png">
             </div>
 
-            <div class="container">
-                <h2 class="container__heading">Resting heart rate</h2>
-                <h3 class="container__subheading">66 bmp (average)</h3>
+            <div class="card card--with-icons">
+                <h2 class="card__heading">Running sessions</h2>
+                <h3 class="card__subheading">Excellent</h3>
+
+                <div class="card__icon">
+                    <div class="card__icon__image">
+                        <img src="./dist/img/place-icon.png" alt="Place Icon">
+                    </div>
+                    <p class="card__icon__heading">10.64</p>
+                    <p class="card__icon__subheading">Kilometers</p>
+                </div>
+
+                
+                <div class="card__icon">
+                    <div class="card__icon__image">
+                        <img src="./dist/img/time-icon.png" alt="Clock Icon">
+                    </div>
+                    <p class="card__icon__heading">1.48</p>
+                    <p class="card__icon__subheading">Hours</p>
+                </div>
+
+                
+                <div class="card__icon">
+                    <div class="card__icon__image">
+                        <img src="./dist/img/sport-icon.png" alt="Running Show Icon">
+                    </div>
+                    <p class="card__icon__heading">5.25</p>
+                    <p class="card__icon__subheading">Speed</p>
+                </div>
             </div>
 
-            <div class="container">
-                <h2 class="container__heading">Resting heart rate</h2>
-                <h3 class="container__subheading">66 bmp (average)</h3>
+            <div class="card card--with-icons">
+                <h2 class="card__heading">Post workout session</h2>
+                <h3 class="card__subheading">Excellent</h3>
+
+                <div class="card__icon">
+                    <div class="card__icon__image">
+                        <img src="./dist/img/musculation-icon.png" alt="Gym Weight Icon">
+                    </div>
+                    <p class="card__icon__heading">48min</p>
+                    <p class="card__icon__subheading">Stretching</p>
+                </div>
+
+                
+                <div class="card__icon">
+                    <div class="card__icon__image">
+                        <img src="./dist/img/head-icon.png" alt="Head shape Icon">
+                    </div>
+                    <p class="card__icon__heading">32min</p>
+                    <p class="card__icon__subheading">Mind training</p>
+                </div>
+
+                
+                <div class="card__icon">
+                    <div class="card__icon__image">
+                        <img src="./dist/img/mini-lotus-icon.png" alt="Lotus Icon">
+                    </div>
+                    <p class="card__icon__heading">1.0h</p>
+                    <p class="card__icon__subheading">Meditation</p>
+                </div>
             </div>
         </div>
     </main>
@@ -74,11 +135,14 @@
 
     <!--,,,,,,,,,,,,,,,,,,,,,,,,,,,USER SIDEBAR,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
     <section class="right-sidebar">
+        <div class="right-sidebar__arrow"><img src="./dist/img/chevron-right.png" alt="Arrow Icon"></div>
         <div class="user">
             <img class="user__avatar" src="./dist/img/avatar.png" alt="User Avatar">
-            <h1 class="user__heading">Isaac Williams</h1>
-            <h2 class="user__subheading">25 years old, London</h2>
-            <button class="user__unlock"><img src="./dist/img/unlock-icon.png"></button>
+            <div class="user__info">
+                <h1 class="user__heading">Isaac Williams</h1>
+                <h2 class="user__subheading">25 years old, London</h2>
+            </div>
+            <button class="user__unlock-btn"><img src="./dist/img/unlock-icon.png" alt="Unlock Icon"></button>
         </div>
 
         <div class="health">
@@ -97,58 +161,79 @@
         </div>
 
         <div class="calendar">
-            <h2 class="calendar__month">March <img src="./dist/img/caret-down.png"></h2>
+            <h2 class="calendar__month">March <img src="./dist/img/caret-down.png" alt="Arrow Down Icon"></h2>
             <div class="calendar__days">
-                <div class="calendar__day">
-                    <p class="calendar__weekday">Mon</p>
-                    <p class="calendar__numberday">9</p>
+                <div class="calendar__days-day">
+                    <p class="calendar__days-day__weekday">Mon</p>
+                    <p class="calendar__days-day__numberday">9</p>
                 </div>
-                <div class="calendar__day">
-                    <p class="calendar__weekday">Tue</p>
-                    <p class="calendar__numberday">10</p>
+                <div class="calendar__days-day">
+                    <p class="calendar__days-day__weekday">Tues</p>
+                    <p class="calendar__days-day__numberday">10</p>
                 </div>
-                <div class="calendar__day">
-                    <p class="calendar__weekday">Wed</p>
-                    <p class="calendar__numberday">11</p>
+                <div class="calendar__days-day calendar__days-day--highlight calendar__days-day--schedule">
+                    <p class="calendar__days-day__weekday">Wed</p>
+                    <p class="calendar__days-day__numberday">11</p>
                 </div>
-                <div class="calendar__day">
-                    <p class="calendar__weekday">Wed</p>
-                    <p class="calendar__numberday">11</p>
+                <div class="calendar__days-day">
+                    <p class="calendar__days-day__weekday">Thu</p>
+                    <p class="calendar__days-day__numberday">12</p>
                 </div>
-                <div class="calendar__day">
-                    <p class="calendar__weekday">Wed</p>
-                    <p class="calendar__numberday">11</p>
+                <div class="calendar__days-day calendar__days-day--schedule">
+                    <p class="calendar__days-day__weekday">Fri</p>
+                    <p class="calendar__days-day__numberday">13</p>
                 </div>
-                <div class="calendar__day">
-                    <p class="calendar__weekday">Wed</p>
-                    <p class="calendar__numberday">11</p>
+                <div class="calendar__days-day">
+                    <p class="calendar__days-day__weekday">Sat</p>
+                    <p class="calendar__days-day__numberday">14</p>
                 </div>
-                <div class="calendar__day">
-                    <p class="calendar__weekday">Wed</p>
-                    <p class="calendar__numberday">11</p>
+                <div class="calendar__days-day">
+                    <p class="calendar__days-day__weekday">Sat</p>
+                    <p class="calendar__days-day__numberday">14</p>
+                </div>
+                <div class="calendar__days-day">
+                    <p class="calendar__days-day__weekday">Mon</p>
+                    <p class="calendar__days-day__numberday">16</p>
                 </div>
             </div>
         </div>
 
-        <div class="container container--event container--event--highlight">
+        <div class="event event--highlight">
             <h3 class="event__title">Match Against Team B</h3>
             <p class="event__time">9:00AM - 11:30AM</p>
             <p class="event__person">Coach: Nelson Hendricks</p>
-            <div class="event__attendees">Icons</div>
+            <div class="event__attendees">
+                <div class="event__attendees-attendee">
+                    <img src="./dist/img/attendee.png" alt="Attendee Avatar">
+                </div>
+                <div class="event__attendees-attendee">
+                    <img src="./dist/img/attendee2.png" alt="Attendee Avatar">
+                </div>
+                <div class="event__attendees-attendee">
+                    <img src="./dist/img/attendee3.png" alt="Attendee Avatar">
+                </div>
+                <div class="event__attendees-attendee">
+                    <img src="./dist/img/attendee4.png" alt="Attendee Avatar">
+                </div>
+                <div class="event__attendees-attendee" alt="Attendee Avatar">
+                    <span>+12</sppan>
+                </div>
+            </div>
+            <div class="event__arrow"><img src="./dist/img/chevron-right.png" alt="Arrow Right Icon"></div>
         </div>
 
-        <div class="container container--event">
-            <h3 class="event__title">Match Against Team B</h3>
+        <div class="event event--health">
+            <h3 class="event__title">Health Appointment</h3>
             <p class="event__time">9:00AM - 11:30AM</p>
-            <p class="event__person">Coach: Nelson Hendricks</p>
-            <div class="event__link">Icons</div>
+            <p class="event__person">Dr. Douglas Wade</p>
+            <a href="#" class="event__link">Follow-up</a>
         </div>
 
         <h2 class="right-sidebar__heading">Post workout sessions</h2>
-        <div class="container container--event">
-            <h3 class="event__title">Match Against Team B</h3>
-            <p class="event__time">9:00AM - 11:30AM</p>
-            <p class="event__person">Coach: Nelson Hendricks</p>
+        <div class="event event--meditation"">
+            <h3 class=" event__title">Meditation</h3>
+            <p class="event__time">5:00PM - 6:00PM</p>
+            <p class="event__person">Coach: Tim Bjorvick</p>
         </div>
 
     </section>

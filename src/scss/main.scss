@@ -2,19 +2,24 @@
 @import 'config'; 
 @import 'nav';
 @import 'middle'; 
-@import 'container'; 
+@import 'card'; 
+@import 'color-card';
 @import 'right-sidebar'; 
 @import 'left-sidebar'; 
 @import 'searchbar';
 @import 'calendar';
 @import 'health';
+@import 'responsive';
+@import 'user';
+@import 'event';
 
 body {
-background-color: $body-bg-color;
-font-family: $font-family;
+background-color: white;
+font-family: var(--font-family);
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 height: 100vh;
 font-size: 14px;
+overflow-x: hidden;
 }

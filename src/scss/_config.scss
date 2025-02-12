@@ -1,39 +1,99 @@
-$body-bg-color: #fff;
-$middle-bg-color: #E8F1F9;
-$accent-color:#7030A0;
+/* VARIABLES */
+:root {
+  --body-bg-color: #fff;
+  --middle-bg-color: #e8f1f9;
+  --font-family: "Raleway", serif;
+  --right-sidebar-heading: #0e426f;
 
-$icon-darkblue: #3B76EF;
-$icon-blue: #5FC5FF;
-$icon-purple: #A66DD4;
+  /* SIZES */
+  --right-sidebar-width: 420px;
+  --left-sidebar-width: 112px;
 
-$container-bg: white;
-$container-heading: #85A5C2;
-$container-subheading: #59748A;
+  /* NAV */
+  --nav-bg: #7030a0;
+  --nav-item-active-bg: #552479;
+  --nav-color: white;
 
-$container-event-heading: #0E426F;
+  /* HEALTH */
+  --health-bg: #e8f1f9;
+  --health-heading: #a3c9ea;
+  --health-subheading: #5fa1da;
 
-$health-bg: #E8F1F9;
-$health-heading: #A3C9EA;
-$health-subheading: #5FA1DA;
+  /* CALENDAR */
+  --calendar-month: #0e426f;
+  --calendar-weekday: #1666ac;
+  --calendar-numberday: #6a7178;
+  --calendar-day-disabled: #dee2e6;
+  --calendar-highlight: #1a79cb;
 
-$calendar-month: #0E426F;
-$calendar-weekday: #1666AC;
-$calendar-numberday: #6A7178;
+  /* COLOR CARD */
+  --card-concentration-bg: #5fa1da;
+  --card-concentration-overlay: #9bbcff;
+  --card-stress-bg: #c5b5f5;
+  --card-stress-overlay: #9b7fee;
+  --card-activity-bg: #eeadc4;
+  --card-activity-overlay: #d96a6a;
 
-$container-concentration-bg: #5FA1DA;
-$container-stress-bg: #C5B5F5;
-$container-activity-bg: #EEADC4;
-$container-event-bg: #F4FAFF;
-$container-event-highlight-bg: #4263EB;
+  /* CARD */
+  --card-radius: 16px;
+  --card-bg: white;
+  --card-heading: #85a5c2;
+  --card-subheading: #59748a;
+  --card-icon-color1: #3b76ef;
+  --card-icon-color2: #5fc5ff;
+  --card-icon-color3: #a66dd4;
+  --card-icon-bg: #eef7fe;
 
-$container-radius: 16px;
-$font-family: "Raleway", serif;
+  /* USER */
+  --user-heading: #0e426f;
+  --user-subheading: #5fa1da;
 
-$nav-color: white;
+  /* EVENT */
+  --event-bg: #e8f1f9;
+  --event-title: #0e426f;
+  --event-text: #12548d;
+  --event-link: #009dde;
+  --event-highlight-bg: #4263eb;
+  --event-attende-bg: #a3c9ea;
+  --event-attendee-extra-bg: #224ca4;
+  --event-border-bottom: #93b0c8;
 
+  /* SEARCHBAR */
+  --searchbar-text: #85a5c2;
+  --searchbar-border: #d4e3f0;
 
-* {
+  /* RESETS */
+  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+/* MEDIA QUERIES */
+@mixin media-lg {
+  @media screen and (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin media-xs {
+  @media screen and (max-width: 420px) {
+    @content;
+  }
 }

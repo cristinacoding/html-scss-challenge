@@ -1,0 +1,39 @@
+.color-card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  width: 100%;
+  padding: 28px;
+  img {
+    max-width: 100%;
+    margin-top: 10px;
+    align-self: center;
+  }
+
+  &__heading {
+    font-weight: 500;
+    color: white;
+    padding-bottom: 8px;
+    font-size: 12px;
+  }
+
+  &__subheading {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+  }
+
+  &--concentration {
+    background-color: var(--card-concentration-bg);
+  }
+
+  &--stress {
+    background-color: var(--card-stress-bg);
+  }
+
+  &--activity {
+    background-color: var(--card-activity-bg);
+  }
+}
