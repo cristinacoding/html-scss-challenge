@@ -3,32 +3,54 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>User Dashboard</title>
-    <meta name="description" content="A dashboard for the user.">
     <link rel="stylesheet" href="./dist/css/main.css">
+    <meta name="description" content="A dashboard for the user.">
     <link rel="icon" type="image/png" href="./dist/img/logo.png">
 </head>
 
 <body>
     <!--,,,,,,,,,,,,,,,,,,,,,,,,,,,NAV SIDEBAR,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
-
-
-    <section class="left-sidebar">
+    <div class="left-sidebar left-sidebar--closed">
         <div class="left-sidebar__top">
             <img class="left-sidebar__logo" src="./dist/img/logo.png" alt="Logo">
-            <button class="left-sidebar__arrow"><img src="./dist/img/menu-expand-icon.png" alt="Expand Icon"></button>
+            <button class="left-sidebar__arrow left-sidebar__arrow--closed"><img src="./dist/img/menu-expand-icon.png" alt="Expand Icon"></button>
         </div>
         <nav class="nav">
             <ul class="nav__menu">
-                <li class="nav__item"><a href="#" aria-label="Home" tabindex="1"><img src="./dist/img/home-icon.png" alt="Home Icon"></a></li>
-                <li class="nav__item"><a href="#" aria-label="Statistics" tabindex="2"></a><img src="./dist/img/chart-icon.png" alt="Chart Icon"></a></li>
-                <li class="nav__item"><a href="#" aria-label="Likes" tabindex="3"></a><img src="./dist/img/heart-icon.png" alt="Heart Icon"></a></li>
-                <li class="nav__item nav__item--active"><a href="#" aria-label="User Information" tabindex="4"></a><img src="./dist/img/home-icon.png" alt="Home Icon"></a></li>
-                <li class="nav__item"><a href="#" aria-label="Settings" tabindex="5"></a><img src="./dist/img/settings-icon.png" alt="Settings Icon"></a></li>
+                <li>
+                    <a class="nav__item" href="#" aria-label="Home" tabindex="1">
+                        <img src="./dist/img/home-icon.png" alt="Home Icon">
+                        <span class="nav__text nav__text--closed">Homepage</span></a>
+                </li>
+                <li>
+                    <a class="nav__item" href="#" aria-label="Statistics" tabindex="2">
+                        <img src="./dist/img/chart-icon.png" alt="Chart Icon">
+                        <span class="nav__text nav__text--closed">Statistics</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav__item" href="#" aria-label="Likes" tabindex="3">
+                        <img src="./dist/img/heart-icon.png" alt="Heart Icon">
+                        <span class="nav__text nav__text--closed">Favourites</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav__item nav__item--active" href="#" aria-label="Employees" tabindex="4">
+                        <img src="./dist/img/home-icon.png" alt="Home Icon">
+                        <span class="nav__text nav__text--closed">Employees</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav__item" href="#" aria-label="Preferences" tabindex="5">
+                        <img src="./dist/img/settings-icon.png" alt="Settings Icon">
+                        <span class="nav__text nav__text--closed">Preferences</span>
+                    </a>
+                </li>
             </ul>
         </nav>
-    </section>
+    </div>
 
     <!--,,,,,,,,,,,,,,,,,,,,,,,,,,,MAIN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
     <main class="middle">
@@ -80,7 +102,7 @@
                     <p class="card__icon__subheading">Kilometers</p>
                 </div>
 
-                
+
                 <div class="card__icon">
                     <div class="card__icon__image">
                         <img src="./dist/img/time-icon.png" alt="Clock Icon">
@@ -89,7 +111,7 @@
                     <p class="card__icon__subheading">Hours</p>
                 </div>
 
-                
+
                 <div class="card__icon">
                     <div class="card__icon__image">
                         <img src="./dist/img/sport-icon.png" alt="Running Show Icon">
@@ -111,7 +133,7 @@
                     <p class="card__icon__subheading">Stretching</p>
                 </div>
 
-                
+
                 <div class="card__icon">
                     <div class="card__icon__image">
                         <img src="./dist/img/head-icon.png" alt="Head shape Icon">
@@ -120,7 +142,7 @@
                     <p class="card__icon__subheading">Mind training</p>
                 </div>
 
-                
+
                 <div class="card__icon">
                     <div class="card__icon__image">
                         <img src="./dist/img/mini-lotus-icon.png" alt="Lotus Icon">
@@ -135,7 +157,7 @@
 
     <!--,,,,,,,,,,,,,,,,,,,,,,,,,,,USER SIDEBAR,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-->
     <section class="right-sidebar">
-        <div class="right-sidebar__arrow"><img src="./dist/img/chevron-right.png" alt="Arrow Icon"></div>
+        <button class="right-sidebar__arrow"><img src="./dist/img/chevron-right.png" alt="Arrow Icon"></button>
         <div class="user">
             <img class="user__avatar" src="./dist/img/avatar.png" alt="User Avatar">
             <div class="user__info">
@@ -237,6 +259,7 @@
         </div>
 
     </section>
+    <script src="./src/js/script.js"></script>
 </body>
 
 </html>

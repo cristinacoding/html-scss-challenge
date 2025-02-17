@@ -11,22 +11,37 @@
     gap: 24px;
   }
 
+  &__text {
+    &--closed {
+      display: none;
+    }
+  }
+
   &__item {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    column-gap: 8px;
+    justify-content: start;
     align-items: center;
-    height: 48px;
-    width: 48px;
-    padding: 12px;
     cursor: pointer;
-    border-radius: 11px;
+    color: white;
 
-    &--active {
-      background-color: var(--nav-item-active-bg);
+    & img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px;
+      border-radius: 11px;
     }
 
     &:last-child {
       margin-top: auto;
+    }
+
+    &--active {
+      img {
+        background-color: var(--nav-item-active-bg);
+      }
     }
   }
 }

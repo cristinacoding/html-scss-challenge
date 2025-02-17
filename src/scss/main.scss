@@ -22,4 +22,9 @@ justify-content: space-between;
 height: 100vh;
 font-size: 14px;
 overflow-x: hidden;
+transition: opacity 100ms ease-in-out;
+}
+
+.body--closed {
+    background-color: var(--middle-bg-color);
 }

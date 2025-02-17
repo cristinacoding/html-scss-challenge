@@ -3,6 +3,7 @@
   flex-direction: column;
   row-gap: 12px;
   height: 96px;
+  min-width: 240px;
 
   &__month {
     color: var(--calendar-month);
