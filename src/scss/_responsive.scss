@@ -12,20 +12,23 @@
     }
   }
   .right-sidebar {
+    position: absolute;
     padding: 30px;
+    margin-right: 0;
   }
 }
 
 @include media-md {
-  :root {
-    --right-sidebar-width: 0px;
-  }
+    body {
+      background-color: var(--middle-bg-color);
+    }
   .right-sidebar {
-    transform: translateX(100%);
+    position: fixed;
   }
   .middle {
     padding: 80px;
     border-radius: 0;
+    margin-right: 0;
   }
 }
 
