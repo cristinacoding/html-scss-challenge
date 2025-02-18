@@ -47,12 +47,15 @@
       grid-area: g;
     }
   }
+
   &--closed {
     padding: 80px;
     border-radius: 0;
     margin-right: 0;
   }
+
   &--overlay {
+    transition: all var(--transition) 600ms;
     &::before {
       content: "";
       position: absolute;
@@ -60,11 +63,12 @@
       right: 0;
       top: 0;
       bottom: 0;
-      background-color: rgba($color: #000000, $alpha: 0.3);
+      background-color: black;
+      opacity: 0.3;
       width: 100%;
       height: 100%;
       z-index: 100;
-      transition: background-color var(--transition) 200ms;
+      transition: all var(--transition) 600ms;
     }
   }
 }
