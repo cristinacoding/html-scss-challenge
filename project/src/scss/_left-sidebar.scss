@@ -5,7 +5,6 @@
   background: var(--nav-bg);
   display: flex;
   flex-direction: column;
-  align-items: center;
   border-radius: 0px 24px 24px 0;
   gap: 32px;
   padding: 20px;
@@ -17,20 +16,34 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    row-gap: 32px;
+    column-gap: 4px;
   }
+
   &__arrow {
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 6px;
+    margin-left: auto;
     &--closed {
       img {
         transform: rotate(180deg);
       }
     }
   }
+
   &--closed {
     width: var(--left-sidebar-width);
+  }
+
+  &__logo {
+    display: flex;
+    width: fit-content;
+    transition: opacity var(--transition);
+    
+    &--closed {
+      width: 0;
+      opacity: 0;
+    }
   }
 }

@@ -33,13 +33,13 @@
     border-bottom-left-radius: 32px;
     z-index: 999;
     cursor: pointer;
-    transition: transform 300ms ease;
     &--closed {
       img {
         transform: rotate(180deg);
       }
     }
   }
+
   &--closed {
     transform: translateX(100%);
   }

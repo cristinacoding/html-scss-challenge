@@ -11,6 +11,7 @@
       column-gap: 12px;
     }
   }
+
   .right-sidebar {
     position: absolute;
     padding: 30px;
@@ -19,12 +20,14 @@
 }
 
 @include media-md {
-    body {
-      background-color: var(--middle-bg-color);
-    }
+  :root {
+    --right-sidebar-width: 300px;
+  }
+
   .right-sidebar {
     position: fixed;
   }
+  
   .middle {
     padding: 80px;
     border-radius: 0;
@@ -33,19 +36,8 @@
 }
 
 @include media-sm {
-  :root {
-    --left-sidebar-width: 70px;
-  }
   .middle {
     padding: 40px;
-    margin-left: 50px;
-  }
-
-  .left-sidebar {
-    padding: 16px;
-    &__top {
-      flex-direction: column;
-    }
   }
 }
 
