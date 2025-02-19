@@ -162,23 +162,6 @@
   border-radius: 0;
   margin-right: 0;
 }
-.middle--overlay {
-  transition: all var(--transition) 600ms;
-}
-.middle--overlay::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: black;
-  opacity: 0.3;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  transition: all var(--transition) 600ms;
-}
 
 .card {
   display: flex;
@@ -303,7 +286,7 @@
   background-color: white;
   height: 100%;
   transition: transform var(--transition);
-  z-index: 10;
+  z-index: 1;
   max-width: 100%;
 }
 .right-sidebar__heading {
@@ -344,14 +327,14 @@
   gap: 32px;
   padding: 20px;
   transition: width var(--transition);
-  z-index: 1000;
+  z-index: 3;
 }
 .left-sidebar__top {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  column-gap: 4px;
+  column-gap: 8px;
 }
 .left-sidebar__arrow {
   background: transparent;
@@ -367,13 +350,33 @@
   width: var(--left-sidebar-width);
 }
 .left-sidebar__logo {
+  transition: width var(--transition), opacity var(--transition);
+  width: 77px;
   display: flex;
-  width: fit-content;
-  transition: opacity var(--transition);
 }
 .left-sidebar__logo--closed {
+  transition: width var(--transition), opacity var(--transition);
   width: 0;
   opacity: 0;
+}
+.left-sidebar__overlay {
+  transition: opacity var(--transition);
+  background-color: black;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  user-select: none;
+}
+.left-sidebar__overlay--closed {
+  transition: opacity var(--transition), z-index var(--transition) 300ms;
+  opacity: 0;
+  z-index: -1;
 }
 
 .searchbar {
@@ -511,9 +514,6 @@
   }
 }
 @media screen and (max-width: 768px) {
-  :root {
-    --right-sidebar-width: 300px;
-  }
   .right-sidebar {
     position: fixed;
   }

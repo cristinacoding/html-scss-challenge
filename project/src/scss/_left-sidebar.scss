@@ -9,14 +9,14 @@
   gap: 32px;
   padding: 20px;
   transition: width var(--transition);
-  z-index: 1000;
+  z-index: 3;
 
   &__top {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    column-gap: 4px;
+    column-gap: 8px;
   }
 
   &__arrow {
@@ -25,6 +25,7 @@
     cursor: pointer;
     padding: 6px;
     margin-left: auto;
+
     &--closed {
       img {
         transform: rotate(180deg);
@@ -37,13 +38,35 @@
   }
 
   &__logo {
+    transition: width var(--transition), opacity var(--transition);
+    width: 77px;
     display: flex;
-    width: fit-content;
-    transition: opacity var(--transition);
-    
+
     &--closed {
+      transition: width var(--transition), opacity var(--transition);
       width: 0;
       opacity: 0;
+    }
+  }
+
+  &__overlay {
+    transition: opacity var(--transition);
+    background-color: black;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    user-select: none;
+
+    &--closed {
+      transition: opacity var(--transition), z-index var(--transition) 300ms;
+      opacity: 0;
+      z-index: -1;
     }
   }
 }

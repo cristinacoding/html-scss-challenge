@@ -10,7 +10,7 @@
   background-color: white;
   height: 100%;
   transition: transform var(--transition);
-  z-index: 10;
+  z-index: 1;
   max-width: 100%;
 
   &__heading {
@@ -33,6 +33,7 @@
     border-bottom-left-radius: 32px;
     z-index: 999;
     cursor: pointer;
+    
     &--closed {
       img {
         transform: rotate(180deg);
