@@ -20,10 +20,6 @@
 }
 
 @include media-md {
-  :root {
-    --right-sidebar-width: 300px;
-  }
-
   .right-sidebar {
     position: fixed;
   }

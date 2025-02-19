@@ -4,6 +4,7 @@ const rightSidebar = document.querySelector(".right-sidebar");
 const leftToggleBtn = document.querySelector(".left-sidebar__arrow");
 const leftSidebar = document.querySelector(".left-sidebar");
 const leftLogo = document.querySelector(".left-sidebar__logo");
+const overlay = document.querySelector(".left-sidebar__overlay");
 
 const navText = document.querySelectorAll(".nav__text");
 
@@ -22,6 +23,7 @@ function toggleLeftSidebar() {
   leftToggleBtn.classList.toggle("left-sidebar__arrow--closed");
   leftLogo.classList.toggle("left-sidebar__logo--closed");
   middleSection.classList.toggle("middle--overlay");
+  overlay.classList.toggle("left-sidebar__overlay--closed");
 
   navText.forEach((element) => {
     element.classList.toggle("nav__text--closed");
